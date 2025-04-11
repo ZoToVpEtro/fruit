@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Свіжа доставка фруктів додому. Найкращі сезонні фрукти за доступними цінами!" />
+  <title>Доставка фруктів додому | Смачно та свіжо</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9fff8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #d4edda;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #28a745;
+    }
+
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 20px;
+    }
+
+    .carousel img {
+      scroll-snap-align: center;
+      flex: none;
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      margin-right: 10px;
+      border-radius: 15px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    button {
+      background-color: #d4edda;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #28a745;
+      color: white;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    form button {
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #d4edda;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    button:active {
+        transform: scale(0.95);
+    }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Доставка фруктів додому</h1>
+    <nav>
+      <a href="#home">Головна</a>
+      <a href="#about">Про нас</a>
+      <a href="#menu">Фрукти</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+  </header>
+
+  <div class="carousel">
+    <img src="https://питомник-парус.рф/upload/iblock/16d/16d6aa8e91f6fcb35ce5222c2ca1e2db.jpg" alt="Яблука" /> <!--фото яблока -->
+    <img src="https://st2.depositphotos.com/1692343/9904/i/450/depositphotos_99044310-stock-photo-raw-organic-bunch-of-bananas.jpg" alt="Банани" /><!--фото банану -->
+    <img src="https://images.prom.ua/6528257371_w600_h600_6528257371.jpg" alt="Виноград" /><!--фото винограду -->
+    <img src="https://images.gastronom.ru/xC4eM8rLPT3yIgTzP74eP558Zw2q1CKQWSaYL4PEpX8/pr:article-preview-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzhmMzgwYjVjLTVlZTgtNGY4Zi1hMWQxLTMwZWFlMjZlMDNhZS5qcGVn" alt="Апельсини" /><!--фото апельсину -->
+    <img src="https://ir.ozone.ru/s3/multimedia-y/c1000/6582801274.jpg" alt="Пітахая" /> <!--фото драгон фрукта -->
+    <img src="https://rg.ru/uploads/images/2024/09/17/istock-1152750103_aff.jpg" alt="Манго" /><!--фото манго -->
+    <img src="https://techhorticulture.com/wp-content/uploads/2021/08/figs-2619978_640.jpg" alt="Інжир" /><!--фото инжир -->
+    <img src="https://ukr.media/static/ba/aimg/3/8/4/384633_1.jpg" alt="Памелло" /><!--фото памелло -->
+  </div>
+
+  <section id="home">
+    <h2>Свіжі фрукти просто до вашого столу!</h2>
+    <p>Замовляйте натуральні та смачні фрукти з доставкою додому. Сезонні пропозиції та вигідні знижки чекають на вас!</p>
+  </section>
+
+  <section id="about">
+    <h2>Про нас</h2>
+    <div class="card">
+      <p>Ми постачаємо тільки свіжі та якісні фрукти безпосередньо з фермерських господарств. Наша мета — зробити ваше харчування здоровим і смачним щодня!</p>
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Наш асортимент</h2>
+    <div class="menu-grid">
+      <div class="card">
+        <h3>Яблука "Червони принц"</h3>
+        <p>Солодкі та хрусткі. Ціна: 50 грн / кг</p>
+        <button>Замовити</button>
+      </div>
+      <div class="card">
+        <h3>Банани</h3>
+        <p>Джерело енергії кожного дня. Ціна: 60 грн / кг</p>
+        <button>Замовити</button>
+      </div>
+      <div class="card">
+        <h3>Апельсини</h3>
+        <p>Соковиті та ароматні. Ціна: 90 грн / кг</p>
+        <button>Замовити</button>
+      </div>
+      <div class="card">
+        <h3>Виноград</h3>
+        <p>Солодкий та свіжий. Ціна: 150 грн / кг</p>
+        <button>Замовити</button>
+      </div>
+      <div class="card">
+        <h3>Пітахая</h3>
+        <p>Екзотичний фрукт із ніжною м'якоттю та освіжаючим смаком. Ціна: 200 грн / шт</p>
+        <button>Замовити</button>
+      </div>
+      <div class="card">
+        <h3>Манго</h3>
+        <p>Соковитий тропічний делікатес з насиченим солодким смаком. Ціна: 350 грн / шт</p>
+        <button>Замовити</button>
+      </div>
+      <div class="card">
+        <h3>Інжир</h3>
+        <p>Ніжний та медовий смак для справжніх гурманів. Ціна: 300 грн / кг</p>
+        <button>Замовити</button>
+      </div>
+      <div class="card">
+        <h3>Памелло</h3>
+        <p>Легкий цитрусовий аромат і приємна кислинка. Ціна: 110 грн / кг</p>
+        <button>Замовити</button>
+      </div>          
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Контакти</h2>
+    <div class="card">
+      <p><strong>Адреса:</strong> м. Харків, вул. Полтавский шлях, 15</p>
+      <p><strong>Телефон:</strong> +380 (50) 987-65-43</p>
+      <form>
+        <input type="text" placeholder="Ваше ім'я" required />
+        <input type="email" placeholder="Ваш Email" required />
+        <textarea rows="4" placeholder="Ваше повідомлення"></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Доставка фруктів додому. Всі права захищені.</p>
+  </footer>
+</body>
+</html>
+
